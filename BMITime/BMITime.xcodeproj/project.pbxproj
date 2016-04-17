@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E71DE5F51CC23DD9003CD322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE5F41CC23DD9003CD322 /* main.m */; };
 		E71DE5FD1CC23EE0003CD322 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE5FC1CC23EE0003CD322 /* BNRPerson.m */; };
+		E71DE6161CC38BB9003CD322 /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE6151CC38BB9003CD322 /* BNREmployee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		E71DE5F41CC23DD9003CD322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E71DE5FB1CC23EE0003CD322 /* BNRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPerson.h; sourceTree = "<group>"; };
 		E71DE5FC1CC23EE0003CD322 /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
+		E71DE6141CC38BB9003CD322 /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
+		E71DE6151CC38BB9003CD322 /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				E71DE5F41CC23DD9003CD322 /* main.m */,
+				E71DE6141CC38BB9003CD322 /* BNREmployee.h */,
+				E71DE6151CC38BB9003CD322 /* BNREmployee.m */,
 			);
 			path = BMITime;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71DE6161CC38BB9003CD322 /* BNREmployee.m in Sources */,
 				E71DE5F51CC23DD9003CD322 /* main.m in Sources */,
 				E71DE5FD1CC23EE0003CD322 /* BNRPerson.m in Sources */,
 			);

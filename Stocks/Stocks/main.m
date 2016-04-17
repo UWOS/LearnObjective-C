@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BNRStockHolding.h"
+//#import "BNRStockHolding.h"
+#import "BNRForeignStockHolding.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BNRStockHolding *stock1 = [[BNRStockHolding alloc] init];
         BNRStockHolding *stock2 = [[BNRStockHolding alloc] init];
-        BNRStockHolding *stock3 = [[BNRStockHolding alloc] init];
+        //BNRStockHolding *stock3 = [[BNRStockHolding alloc] init];
+        
+        BNRForeignStockHolding *foreignStock = [[BNRForeignStockHolding alloc] init];
         
         NSMutableArray *stockarray = [[NSMutableArray alloc] init];
         
@@ -27,13 +30,14 @@ int main(int argc, const char * argv[]) {
         [stock2 setCurrentSharePrice:10.56];
         [stock2 setNumberOfShare:90];
         
-        [stock3 setPurchaseSharePrice:45.10];
-        [stock3 setCurrentSharePrice:49.51];
-        [stock3 setNumberOfShare:210];
+        [foreignStock setPurchaseSharePrice:45.10];
+        [foreignStock setCurrentSharePrice:49.51];
+        [foreignStock setNumberOfShare:210];
+        foreignStock.convertsionRate = 0.94;
         
         [stockarray addObject:stock1];
         [stockarray addObject:stock2];
-        [stockarray addObject:stock3];
+        [stockarray addObject:foreignStock];
         
         for (BNRStockHolding *sh in stockarray) {
             NSLog(@"stock%d PSP: %.2f,CSP: %.2f,NOS: %d,C: %.2f,V: %.2f.",

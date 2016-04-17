@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E71DE60B1CC245BE003CD322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE60A1CC245BE003CD322 /* main.m */; };
 		E71DE6131CC245DD003CD322 /* BNRStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE6121CC245DD003CD322 /* BNRStockHolding.m */; };
+		E71DE6191CC394AA003CD322 /* BNRForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE6181CC394AA003CD322 /* BNRForeignStockHolding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		E71DE60A1CC245BE003CD322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E71DE6111CC245DD003CD322 /* BNRStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRStockHolding.h; sourceTree = "<group>"; };
 		E71DE6121CC245DD003CD322 /* BNRStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRStockHolding.m; sourceTree = "<group>"; };
+		E71DE6171CC394AA003CD322 /* BNRForeignStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRForeignStockHolding.h; sourceTree = "<group>"; };
+		E71DE6181CC394AA003CD322 /* BNRForeignStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRForeignStockHolding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 		E71DE5FE1CC245BE003CD322 = {
 			isa = PBXGroup;
 			children = (
+				E71DE6171CC394AA003CD322 /* BNRForeignStockHolding.h */,
+				E71DE6181CC394AA003CD322 /* BNRForeignStockHolding.m */,
 				E71DE6111CC245DD003CD322 /* BNRStockHolding.h */,
 				E71DE6121CC245DD003CD322 /* BNRStockHolding.m */,
 				E71DE6091CC245BE003CD322 /* Stocks */,
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71DE6191CC394AA003CD322 /* BNRForeignStockHolding.m in Sources */,
 				E71DE60B1CC245BE003CD322 /* main.m in Sources */,
 				E71DE6131CC245DD003CD322 /* BNRStockHolding.m in Sources */,
 			);
@@ -243,6 +249,7 @@
 				E71DE6101CC245BE003CD322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

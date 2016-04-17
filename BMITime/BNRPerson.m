@@ -10,6 +10,7 @@
 
 @implementation BNRPerson
 
+/*
 - (float)heightInMeters
 {
     return _heightInMeters;
@@ -29,6 +30,8 @@
 {
     _weightInKilos = w;
 }
+ 
+*/ 
 
 - (float)bodyMassIndex
 {
