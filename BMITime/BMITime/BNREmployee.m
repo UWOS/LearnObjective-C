@@ -9,6 +9,16 @@
 #import "BNREmployee.h"
 #import "BNRAsset.h"
 
+// 类扩展
+@interface BNREmployee()
+{
+    NSMutableArray *_assets;
+}
+
+@property (nonatomic) unsigned int officeAlarmCode;
+
+@end
+
 @implementation BNREmployee
 
 - (double) yearsOfEmployment
