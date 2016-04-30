@@ -7,6 +7,7 @@
 //
 
 #import "BNREmployee.h"
+#import "BNRAsset.h"
 
 @implementation BNREmployee
 
@@ -32,7 +33,52 @@
 
 - (NSString *) description
 {
-    return [NSString stringWithFormat:@"<Employee %d>", self.employeeID];
+    //return [NSString stringWithFormat:@"<Employee %d>", self.employeeID];
+    return [NSString stringWithFormat:@"<Employee %u: $%u in assets>", self.employeeID, self.valueOfAssets];
+}
+
+- (void) dealloc
+{
+    NSLog(@"deallocating %@", self);
+}
+
+- (void) setAssets:(NSArray *) a
+{
+    _assets = [a mutableCopy];
+}
+
+- (NSArray *) assets
+{
+    return [_assets copy];
+}
+
+- (void) addAsset:(BNRAsset *)a
+{
+    // assets 是否为nil?
+    if (!_assets) {
+        // 创建数组
+        _assets = [[NSMutableArray alloc] init];
+    }
+    
+    [_assets addObject:a];
+}
+
+- (unsigned int) valueOfAssets
+{
+    //累加物品的转售价值
+    unsigned int sum = 0;
+    for (BNRAsset *a in _assets) {
+        sum += [a resaleValue];
+    }
+    return sum;
+}
+
+// exce 21.2
+- (void) removeAsset:(unsigned int)index
+{
+    if (_assets && index < [_assets count]) {
+        [_assets removeObjectAtIndex:index];
+    }
 }
 
 @end

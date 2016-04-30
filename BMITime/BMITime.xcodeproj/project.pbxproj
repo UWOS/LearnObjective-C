@@ -10,6 +10,7 @@
 		E71DE5F51CC23DD9003CD322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE5F41CC23DD9003CD322 /* main.m */; };
 		E71DE5FD1CC23EE0003CD322 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE5FC1CC23EE0003CD322 /* BNRPerson.m */; };
 		E71DE6161CC38BB9003CD322 /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = E71DE6151CC38BB9003CD322 /* BNREmployee.m */; };
+		E788127D1CCCC59200FE7949 /* BNRAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E788127C1CCCC59200FE7949 /* BNRAsset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		E71DE5FC1CC23EE0003CD322 /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
 		E71DE6141CC38BB9003CD322 /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
 		E71DE6151CC38BB9003CD322 /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
+		E788127B1CCCC59200FE7949 /* BNRAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAsset.h; sourceTree = "<group>"; };
+		E788127C1CCCC59200FE7949 /* BNRAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAsset.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,8 @@
 		E71DE5E81CC23DD9003CD322 = {
 			isa = PBXGroup;
 			children = (
+				E788127B1CCCC59200FE7949 /* BNRAsset.h */,
+				E788127C1CCCC59200FE7949 /* BNRAsset.m */,
 				E71DE5FB1CC23EE0003CD322 /* BNRPerson.h */,
 				E71DE5FC1CC23EE0003CD322 /* BNRPerson.m */,
 				E71DE5F31CC23DD9003CD322 /* BMITime */,
@@ -131,6 +136,7 @@
 				E71DE6161CC38BB9003CD322 /* BNREmployee.m in Sources */,
 				E71DE5F51CC23DD9003CD322 /* main.m in Sources */,
 				E71DE5FD1CC23EE0003CD322 /* BNRPerson.m in Sources */,
+				E788127D1CCCC59200FE7949 /* BNRAsset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
