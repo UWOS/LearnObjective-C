@@ -57,6 +57,8 @@ int main(int argc, const char * argv[]) {
             [employees addObject:mikey];
         }
         
+        NSMutableArray *allAssets = [[NSMutableArray alloc] init];
+        
         // 创建10个BNRAsset对象
         for (int i = 0; i < 10; i++) {
             // 创建一个BNRAsset对象
@@ -75,18 +77,24 @@ int main(int argc, const char * argv[]) {
             
             // 将BNRAsset对象赋给该BNREmployee对象
             [randomEmployee addAsset:asset];
+            
+            [allAssets addObject:asset];
         }
         
         NSLog(@"Employees: %@", employees);
         NSLog(@"Giving up ownership of one employee");
         [employees removeObjectAtIndex:5];
+        NSLog(@"allAssets: %@", allAssets);
         // exce 21.2 --------
         NSLog(@"Remove one employee's one of assets.");
         [employees[5] removeAsset:1];
         // -------- exce 21.2
         NSLog(@"Giving up ownership of arrays");
+        
+        allAssets = nil;
         employees = nil;
         
     }
+    sleep(100);
     return 0;
 }
