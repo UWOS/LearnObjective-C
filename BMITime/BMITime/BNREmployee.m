@@ -12,7 +12,7 @@
 // 类扩展
 @interface BNREmployee()
 {
-    NSMutableArray *_assets;
+    NSMutableSet *_assets;
 }
 
 @property (nonatomic) unsigned int officeAlarmCode;
@@ -67,7 +67,7 @@
     // assets 是否为nil?
     if (!_assets) {
         // 创建数组
-        _assets = [[NSMutableArray alloc] init];
+        _assets = [[NSMutableSet alloc] init];
     }
     
     [_assets addObject:a];
@@ -85,11 +85,11 @@
 }
 
 // exce 21.2
-- (void) removeAsset:(unsigned int)index
-{
-    if (_assets && index < [_assets count]) {
-        [_assets removeObjectAtIndex:index];
-    }
-}
+//- (void) removeAsset:(unsigned int)index
+//{
+//    if (_assets && index < [_assets count]) {
+//        [_assets removeObjectAtIndex:index];
+//    }
+//}
 
 @end

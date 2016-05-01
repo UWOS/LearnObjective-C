@@ -44,6 +44,9 @@ int main(int argc, const char * argv[]) {
         // 创建一数组，用来包含多个BNREmployee对象
         NSMutableArray *employees = [[NSMutableArray alloc] init];
         
+        // 创建NSmutableDictionary 对象，用于包含多个“主管”。
+        NSMutableDictionary *excutives = [[NSMutableDictionary alloc] init];
+        
         for (int i = 0; i < 10; i++) {
             // 创建BNREmployee实例
             BNREmployee *mikey = [[BNREmployee alloc] init];
@@ -55,6 +58,16 @@ int main(int argc, const char * argv[]) {
             
             //将新创建的BNREmployee实例加入数组
             [employees addObject:mikey];
+            
+            // 第一个BNREmployee对象？
+            if (i == 0) {
+                [excutives setObject:mikey forKey:@"CEO"];
+            }
+            
+            // 第二个BNREmployee对象？
+            if (i == 1) {
+                [excutives setObject:mikey forKey:@"CTO"];
+            }
         }
         
         NSMutableArray *allAssets = [[NSMutableArray alloc] init];
@@ -81,13 +94,37 @@ int main(int argc, const char * argv[]) {
             [allAssets addObject:asset];
         }
         
+        NSSortDescriptor *voa = [NSSortDescriptor sortDescriptorWithKey:@"valueOfAssets" ascending:YES];
+        
+        NSSortDescriptor *eid = [NSSortDescriptor sortDescriptorWithKey:@"employeeID" ascending:YES];
+        // 居然可以这样指定排序的依据值！
+                                 
+        [employees sortUsingDescriptors: @[voa, eid]];
+        
+        
         NSLog(@"Employees: %@", employees);
+        
         NSLog(@"Giving up ownership of one employee");
         [employees removeObjectAtIndex:5];
+        
         NSLog(@"allAssets: %@", allAssets);
+        
+        // 输出整个NSMutableDictionary 对象
+        NSLog(@"exexutives: %@", excutives);
+        
+        // 输出CEO的信息
+        NSLog(@"CEO: %@", excutives[@"CEO"]);
+        excutives = nil;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"holder.valueOfAssets > 70"];
+        // amazing.像是能够理解并执行这句字符串一样，而实际上也确实是执行了吧？前面那个排序的也类似？
+        NSArray *toBeReclaimed = [allAssets filteredArrayUsingPredicate:predicate];
+        NSLog(@"toBeReclaimed: %@", toBeReclaimed);
+        toBeReclaimed = nil;
+        
         // exce 21.2 --------
-        NSLog(@"Remove one employee's one of assets.");
-        [employees[5] removeAsset:1];
+        //NSLog(@"Remove one employee's one of assets.");
+        //[employees[5] removeAsset:1];
         // -------- exce 21.2
         NSLog(@"Giving up ownership of arrays");
         
