@@ -14,6 +14,12 @@ int main(int argc, const char * argv[]) {
         
         BNRLogger *logger = [[BNRLogger alloc] init];
         
+        [[NSNotificationCenter defaultCenter]
+         addObserver:logger
+         selector:@selector(zoneChange:)
+         name:NSSystemTimeZoneDidChangeNotification
+         object:nil];
+        
         NSURL *url = [NSURL URLWithString:@"https://developer.apple.com/library/ios/navigation/#section=Resource%20Types&topic=Reference"];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

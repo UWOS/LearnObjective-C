@@ -53,7 +53,7 @@
     NSLog(@"string has %lu characters", [string length]);
     
     // 如果需要输出获取的全部数据，则可以取消下面这行代码的注释
-     NSLog(@"The whole string is %@", string);
+    // NSLog(@"The whole string is %@", string);
     
 }
 
@@ -62,6 +62,11 @@
 {
     NSLog(@"connection failed: %@", [error localizedDescription]);
     _incomingData = nil;
+}
+
+-(void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"The system time zone has changed!");
 }
 
 @end
