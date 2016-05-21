@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-//typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL *);   // exce 28.1
+//typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL *);   // ex 28.1
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         
         // 声明Block变量
         //void (^devowelizer)(id, NSUInteger, BOOL *);
-        //ArrayEnumerationBlock devowelizer;   // exce 28.1
+        //ArrayEnumerationBlock devowelizer;   // ex 28.1
         
         // 将Block对象赋给变量
         /*devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
@@ -49,10 +49,10 @@ int main(int argc, const char * argv[]) {
             
             [devowelizedStrings addObject:newString];
         };   // Block变量赋值结束
-        */   // exce 28.1
+        */   // ex 28.1
         
         // 枚举数组对象，针对每个数组中的对象，执行Block对象devowelizer
-        [originalStrings enumerateObjectsUsingBlock: /* devowelizer   exce 28.1 */
+        [originalStrings enumerateObjectsUsingBlock: /* devowelizer   ex 28.1 */
          ^(id string, NSUInteger i, BOOL *stop) {
             NSRange yRange = [string rangeOfString:@"y" options:NSCaseInsensitiveSearch];
             
@@ -74,7 +74,7 @@ int main(int argc, const char * argv[]) {
             }
             
             [devowelizedStrings addObject:newString];
-        }/* exce 28.1 */];
+        }/* ex 28.1 */];
         NSLog(@"new strings: %@", devowelizedStrings);
         
     }
