@@ -18,10 +18,10 @@
     // 是否返回非nil的值
     if (self) {
         // 为_productName赋值
-        _productName = [pn copy];
+        [self setProductName:pn];
         
         // 为_voltage赋初始值
-        _voltage = 120;
+        [self setVoltage:120];
     }
     
     // 返回指向新对象的指针
