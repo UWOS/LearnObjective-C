@@ -18,7 +18,8 @@
     // 是否返回非nil的值
     if (self) {
         // 为_productName赋值
-        [self setProductName:pn];
+        //[self setProductName:pn];
+        _productName = [pn copy];
         
         // 为_voltage赋初始值
         [self setVoltage:120];
@@ -35,7 +36,13 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@: %d volts>", self.productName, self.voltage];
+    return [NSString stringWithFormat:@"<%@: %d volts>", _productName, self.voltage];
+}
+
+- (void) setVoltage:(int)x
+{
+    NSLog(@"setting voltage to %d", x);
+    _voltage = x;
 }
 
 @end

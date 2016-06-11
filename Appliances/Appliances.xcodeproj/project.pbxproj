@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E76B76521D0AAB80000A8349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B76511D0AAB80000A8349 /* main.m */; };
 		E76B765C1D0AAEA6000A8349 /* BNRAppliance.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B765B1D0AAEA6000A8349 /* BNRAppliance.m */; };
+		E76B765F1D0AB612000A8349 /* BNROwnedAppliance.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B765E1D0AB612000A8349 /* BNROwnedAppliance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		E76B76511D0AAB80000A8349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E76B765A1D0AAEA6000A8349 /* BNRAppliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAppliance.h; sourceTree = "<group>"; };
 		E76B765B1D0AAEA6000A8349 /* BNRAppliance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAppliance.m; sourceTree = "<group>"; };
+		E76B765D1D0AB612000A8349 /* BNROwnedAppliance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNROwnedAppliance.h; sourceTree = "<group>"; };
+		E76B765E1D0AB612000A8349 /* BNROwnedAppliance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNROwnedAppliance.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				E76B76511D0AAB80000A8349 /* main.m */,
 				E76B765A1D0AAEA6000A8349 /* BNRAppliance.h */,
 				E76B765B1D0AAEA6000A8349 /* BNRAppliance.m */,
+				E76B765D1D0AB612000A8349 /* BNROwnedAppliance.h */,
+				E76B765E1D0AB612000A8349 /* BNROwnedAppliance.m */,
 			);
 			path = Appliances;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76B765C1D0AAEA6000A8349 /* BNRAppliance.m in Sources */,
+				E76B765F1D0AB612000A8349 /* BNROwnedAppliance.m in Sources */,
 				E76B76521D0AAB80000A8349 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

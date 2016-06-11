@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface BNRAppliance : NSObject
+{
+    NSString *_productName;
+}
 
-@property (nonatomic, copy) NSString *productName;
+//@property (nonatomic, copy) NSString *productName;
 @property (nonatomic) int voltage;
 
+// 指定初始化方法
 - (instancetype)initWithProductName:(NSString *)pn;
 
 @end
