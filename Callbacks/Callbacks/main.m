@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRLogger.h"
+#import "BNRObserver.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -44,6 +45,15 @@ int main(int argc, const char * argv[]) {
                                                       selector:@selector(updateLastTime:)
                                                         userInfo:nil
                                                          repeats:YES];
+        
+        __unused BNRObserver *observer = [[BNRObserver alloc] init];
+        
+        // 无论lastTime何时发生变化，都要通知我它改变的新值以及改变之前的旧值
+        [logger addObserver:observer
+                 forKeyPath:@"lastTime"
+                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                    context:nil];
+        
         [[NSRunLoop currentRunLoop] run];
         
     }
