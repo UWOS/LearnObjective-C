@@ -25,7 +25,10 @@
 - (void)updateLastTime:(NSTimer *)t
 {
     NSDate *now = [NSDate date];
-    [self setLastTime:now];
+    //[self setLastTime:now];
+    [self willChangeValueForKey:@"lastTime"];
+    _lastTime = now;   // 不使用存取方法设置lastTime，测试新的(上下这种)通知Observer的形式。
+    [self didChangeValueForKey:@"lastTime"];
     NSLog(@"Just set time to %@", self.lastTimeString);
 }
 
