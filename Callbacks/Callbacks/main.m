@@ -50,7 +50,7 @@ int main(int argc, const char * argv[]) {
         
         // 无论lastTime何时发生变化，都要通知我它改变的新值以及改变之前的旧值
         [logger addObserver:observer
-                 forKeyPath:@"lastTime"
+                 forKeyPath:@"lastTimeString"
                     options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                     context:nil];
         

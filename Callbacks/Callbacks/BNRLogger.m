@@ -72,4 +72,9 @@
     NSLog(@"The system time zone has changed!");
 }
 
+// 关联起lastTime的变化和lastTimeString。方法名关联了相关变量名。
++ (NSSet *)keyPathsForValuesAffectingLastTimeString
+{
+    return [NSSet setWithObjects:@"lastTime", nil];
+}
 @end
